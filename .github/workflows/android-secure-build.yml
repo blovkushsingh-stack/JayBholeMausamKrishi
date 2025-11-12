@@ -1,0 +1,40 @@
+name: Secure Android APK Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Decode Firebase JSON
+        run: echo "$FIREBASE_JSON" | base64 --decode > app/google-services.json
+        env:
+          FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
+
+      - name: Write local.properties with keys
+        run: |
+          echo "OPENAI_KEY=${{ secrets.OPENAI_KEY }}" >> local.properties
+          echo "OPENWEATHER_KEY=${{ secrets.OPENWEATHER_KEY }}" >> local.properties
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: JayBholeKrishi-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
