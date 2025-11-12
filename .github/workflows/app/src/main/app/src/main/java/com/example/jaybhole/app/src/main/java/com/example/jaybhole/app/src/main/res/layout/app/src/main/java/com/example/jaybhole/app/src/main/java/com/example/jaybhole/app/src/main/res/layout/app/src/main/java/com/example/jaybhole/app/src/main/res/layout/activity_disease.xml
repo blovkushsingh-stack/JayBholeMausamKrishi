@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧠 फसल बीमारी पहचानें"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#E65100"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnPickImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📸 पत्ती की फोटो चुनें"
+            android:backgroundTint="#E65100"
+            android:textColor="#fff"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnAnalyze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔍 बीमारी पहचानें"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#fff"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI विश्लेषण यहाँ दिखेगा..."
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+</ScrollView>
