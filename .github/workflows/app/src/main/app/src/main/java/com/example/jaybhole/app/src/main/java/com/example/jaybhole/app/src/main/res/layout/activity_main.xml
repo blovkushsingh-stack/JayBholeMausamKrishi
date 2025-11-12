@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F5E9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="🌾 जय भोले मौसम कृषि"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌦️ अभी का मौसम बताओ"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#fff"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 एआई फसल सलाह / रिपोर्ट"
+            android:backgroundTint="#1B5E20"
+            android:textColor="#fff"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnDisease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧠 फसल बीमारी पहचानें"
+            android:backgroundTint="#E65100"
+            android:textColor="#fff"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🗺️ ज़िलेवार रोग मैप देखें"
+            android:backgroundTint="#00796B"
+            android:textColor="#fff"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnForecasts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📜 रिपोर्ट हिस्ट्री"
+            android:backgroundTint="#6A1B9A"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+</ScrollView>
